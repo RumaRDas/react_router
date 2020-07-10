@@ -1,29 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Nav() {
+    const navStyle={
+        color:"white"
+    }
     return (
         <div>
-        <nav className="navbar navbar-default navbar-fixed-top">
-        <div className="container">
-            <div className="navbar-header">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                </button>
-                <a className="navbar-brand" href="#myPage">Logo</a>
-            </div>
-            <div className="collapse navbar-collapse" id="myNavbar">
-                <ul className="nav navbar-nav navbar-right">
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#services">Shop</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+            <nav className="navbar ">
+                    <h1>
+                        <Link  style ={navStyle} to="/">Logo</Link>
+                    </h1>
+                        <ul className="nav-link">
+                        <li> <Link  style ={navStyle} to="/about">About</Link></li>
+                            <Link style ={navStyle} to="/shop"><li>Shop</li></Link>
+                            <Link style ={navStyle} to="/cntact"><li>Contact</li></Link>
+                        </ul>
+            </nav>
         </div>
-    </nav>
-</div>
-     
+
     )
 }
 

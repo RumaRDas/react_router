@@ -14,10 +14,10 @@ function App() {
     <Router>
     <div>
     <Nav />
-    <Route  path="/"  component={Home}/>
-    <Route path ="/about" component={About}/>
-    <Route  path ="/shop" component={Shop}/>
-    <Route path ="/contact" component={Contact}/>
+    <Route exact path="/"component={Home}/>
+    <Route exact path ="/about" component={About}/>
+    <Route exact path ="/shop" component={Shop}/>
+    <Route exact path ="/contact" component={Contact}/>
     </div>
     </Router>
 
